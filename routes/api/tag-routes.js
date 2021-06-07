@@ -11,8 +11,6 @@ router.get('/', async (req, res) => {
        // JOIN with Products
        include: [{ 
           model: Product, 
-          through: ProductTag,
-          as: 'product_data'
         }]
     });
     res.status(200).json(tagData);
@@ -29,9 +27,7 @@ router.get('/:id', async (req, res) => {
        // JOIN with Products
        include: [{ 
         model: Product, 
-        through: ProductTag,
-        as: 'product_data'
-      }]
+        }]
     });
 
     if (!tagData) {
