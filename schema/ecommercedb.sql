@@ -20,12 +20,13 @@ CREATE TABLE product(
 
 CREATE TABLE tag (
   id INT NOT NULL AUTO_INCREMENT,
-  tag_name VARCHAR(100) NOT NULL
+  tag_name VARCHAR(100) NOT NULL,
+  PRIMARY KEY (id)
 );
 
 CREATE TABLE product_tag (
   id INT NOT NULL AUTO_INCREMENT,
   product_id INT,
-  tag_id INT
-
+  tag_id INT,
+  PRIMARY KEY (id)
 );
